@@ -84,28 +84,23 @@ It has the following charming features:
 
 Pamuretas adapted the master-slave paradigm, and model the sets of individual tasks
 as two FIFO queues, where they are enqueued in topological order of the DAG.
-Concretely:
 
 <table>
-<tr><th>Pamuretas System Architecture</th>
+<tr><th>System Architecture</th><th>Work Flow</th></tr>
 <tr><td>
 
 ![arch](figs/arch.png)
 
+</td><td>
+
+![loop](figs/loop.png)
+
 </td></tr> </table>
 
 The core of Pamuretas lies on its ability of delegating between the key
-components:
-
-<table>
-<tr><th>Pamuretas Working Flow</th>
-<tr><td>
-![loop](figs/loop.png)
-</td></tr> </table>
-
-
-As we shall see in the sequel, these are vital to Pamuretas' performance and
-robustness.
+components, i.e., one scheduler and two dispatchers. The main working
+flow is outlined above. As we shall see in the sequel, these are vital
+to Pamuretas' performance and robustness.
 
 ## Usage
 
@@ -195,13 +190,17 @@ with sufficient resource:
 
 which is about 15 seconds.
 
-### Producing One Single Car
+### Single/Mutliple Production Goals
 
 <table>
-<tr><th>Surface of Production Time aginst Worker-Space</th>
+<tr><th>Surface of Production Time aginst Worker-Space</th></tr>
 <tr><td>
 
 ![single_car_surface](figs/single_car_surface.png)
+
+</tr><tr>
+
+![eight_cars_surface](figs/eight_cars_surface.png)
 
 </td></tr> </table>
 
@@ -211,16 +210,6 @@ it also does not suffer from deadlock and alike
 when very limited spaces are provided. The results
 are nearly-optimal compared to the baseline computed
 from last section.
-
-### Producing Multiple Cars
-
-<table>
-<tr><th>Surface of Production Time aginst Worker-Space</th>
-<tr><td>
-
-![eight_cars_surface](figs/eight_cars_surface.png)
-
-</td></tr> </table>
 
 When we scale up the production task, we note
 the contours are nearly identical -- with
@@ -232,32 +221,27 @@ time of Pamuretas is near optimal and remains stable
 (the plateau near the reader).
 
 
-### Throughput
+### Optimal Performance Analysis
 
-We proceed to consider the throughput of Pamuretas.
+We proceed to consider the throughput and scalability of Pamuretas.
 
 
 <table>
-<tr><th>Maximum Throughput (cars/sec)</th>
+<tr><th>Maximum Throughput (cars/sec)</th>Production Time with Unlimited
+Resource<th>
 <tr><td>
 
 ![throughput](figs/throughput.png)
+
+</tr><tr>
+
+![scalability](figs/scalability.png)
 
 </td></tr> </table>
 
 First noted the plotter automatically extrapolates
 the values at the boundary, hence resulting the slope
 near reader. This should be ignored though.
-
-### Scalability
-
-<table>
-<tr><th>Production Time with Unlimited Resources</th>
-<tr><td>
-
-![scalability](figs/scalability.png)
-
-</td></tr> </table>
 
 Under the scenario where sufficient resources are available,
 Pamuretas is able to finish the production near the optimal
