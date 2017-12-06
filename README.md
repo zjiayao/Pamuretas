@@ -41,7 +41,6 @@ occupy any spaces upon completion.
 
 
 </td><td>
-with the following production time configurations:
 
 | Task     | Time/sec | Amount |
 | :-:      | :-:      | :-:    |
@@ -87,14 +86,23 @@ Pamuretas adapted the master-slave paradigm, and model the sets of individual ta
 as two FIFO queues, where they are enqueued in topological order of the DAG.
 Concretely:
 
+<table>
+<tr><th>Pamuretas System Architecture</th>
+<tr><td>
 
 ![arch](figs/arch.png)
 
+</td></tr> </table>
 
 The core of Pamuretas lies on its ability of delegating between the key
 components:
 
+<table>
+<tr><th>Pamuretas Working Flow</th>
+<tr><td>
 ![loop](figs/loop.png)
+</td></tr> </table>
+
 
 As we shall see in the sequel, these are vital to Pamuretas' performance and
 robustness.
@@ -189,7 +197,13 @@ which is about 15 seconds.
 
 ### Producing One Single Car
 
+<table>
+<tr><th>Surface of Production Time aginst Worker-Space</th>
+<tr><td>
+
 ![single_car_surface](figs/single_car_surface.png)
+
+</td></tr> </table>
 
 We note Pamuretas is able to utilize the abundant
 working force and storage space rather quickly;
@@ -200,7 +214,13 @@ from last section.
 
 ### Producing Multiple Cars
 
+<table>
+<tr><th>Surface of Production Time aginst Worker-Space</th>
+<tr><td>
+
 ![eight_cars_surface](figs/eight_cars_surface.png)
+
+</td></tr> </table>
 
 When we scale up the production task, we note
 the contours are nearly identical -- with
@@ -216,7 +236,14 @@ time of Pamuretas is near optimal and remains stable
 
 We proceed to consider the throughput of Pamuretas.
 
+
+<table>
+<tr><th>Maximum Throughput (cars/sec)</th>
+<tr><td>
+
 ![throughput](figs/throughput.png)
+
+</td></tr> </table>
 
 First noted the plotter automatically extrapolates
 the values at the boundary, hence resulting the slope
@@ -224,7 +251,13 @@ near reader. This should be ignored though.
 
 ### Scalability
 
+<table>
+<tr><th>Production Time with Unlimited Resources</th>
+<tr><td>
+
 ![scalability](figs/scalability.png)
+
+</td></tr> </table>
 
 Under the scenario where sufficient resources are available,
 Pamuretas is able to finish the production near the optimal
