@@ -198,7 +198,7 @@ which is about 15 seconds.
 
 ![single_car_surface](figs/single_car_surface.png)
 
-</tr><tr>
+</td><td>
 
 ![eight_cars_surface](figs/eight_cars_surface.png)
 
@@ -228,12 +228,13 @@ We proceed to consider the throughput and scalability of Pamuretas.
 
 <table>
 <tr><th>Maximum Throughput (cars/sec)</th>Production Time with Unlimited
-Resource<th>
+Resource<th></tr>
+
 <tr><td>
 
 ![throughput](figs/throughput.png)
 
-</tr><tr>
+</td><td>
 
 ![scalability](figs/scalability.png)
 
