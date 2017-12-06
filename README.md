@@ -227,8 +227,8 @@ We proceed to consider the throughput and scalability of Pamuretas.
 
 
 <table>
-<tr><th>Maximum Throughput (cars/sec)</th>Production Time with Unlimited
-Resource<th></tr>
+<tr><th>Maximum Throughput (cars/sec)</th><th>Production Time with Unlimited
+Resource</th></tr>
 
 <tr><td>
 
@@ -242,9 +242,9 @@ Resource<th></tr>
 
 First noted the plotter automatically extrapolates
 the values at the boundary, hence resulting the slope
-near reader. This should be ignored though.
-
-Under the scenario where sufficient resources are available,
+near reader. This should be ignored though. The increasing
+along the diagonal of worker-space plane implies a good
+scalability. Under the scenario where sufficient resources are available,
 Pamuretas is able to finish the production near the optimal
 time, i.e., around 15 seconds.
 
