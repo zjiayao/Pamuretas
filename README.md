@@ -88,7 +88,7 @@ Pamuretas adapted the master-slave paradigm, and model the sets of individual ta
 as two FIFO queues, where they are enqueued in topological order of the DAG.
 
 
-<table align="center">
+<table align="center" style="margin: 0px auto;">
 <tr><th>System Architecture</th></tr>
 <tr><td>
 
@@ -97,7 +97,7 @@ as two FIFO queues, where they are enqueued in topological order of the DAG.
 </td></tr></table>
 
 
-<table>
+<table align="center" style="margin: 0px auto;">
 <tr><th>Work Flow</th></tr>
 <tr><td>
 
