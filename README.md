@@ -98,12 +98,8 @@ as two FIFO queues, where they are enqueued in topological order of the DAG.
 
 
 <table>
-<tr><th>System Architecture</th><th>Work Flow</th></tr>
+<tr><th>Work Flow</th></tr>
 <tr><td>
-
-![arch](figs/arch.png)
-
-</td><td>
 
 ![loop](figs/loop.png)
 
@@ -205,7 +201,8 @@ which is about 15 seconds.
 ### Single/Mutliple Production Goals
 
 <table>
-<tr><th>Surface of Production Time aginst Worker-Space</th></tr>
+<tr>Surface of Production Time aginst Worker-Space</tr>
+
 <tr><td>
 
 ![single_car_surface](figs/single_car_surface.png)
