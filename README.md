@@ -9,7 +9,7 @@ Gitter](https://badges.gitter.im/zjiayao/Pamuretas.svg)](https://gitter.im/zjiay
 
 ![demo](figs/demo.gif)
 
-*100 workers produces 10 cars given sufficient storage spaces with ~17.14 seconds.*
+*100 workers produces 10 cars given sufficient storage spaces in ~17.14 seconds.*
 
 **This project has a companion technical report, [learn
 more](https://i.cs.hku.hk/~jyzhang/doc/pamuretas/).**
@@ -25,7 +25,7 @@ instance of this class of problems, but it does it very well.
 
 ### Problem Formulation
 
-We formulate our problem as a variant to the classical custume-producer problem
+We formulate our problem as a variant to the classical costumer-producer problem
 with Resource Constrained Project Scheduling Problem (RCPSP) flavour.
 Concretely, given the number of workers and the goal of production, we wish to
 complete production with a pre-specified amount of *storage space* such that
@@ -59,7 +59,7 @@ occupy any spaces upon completion.
 
 ### Features
 
-It has the following charming features:
+Pamuretas has the following charming characteristics:
 
 - Multi-Threading
 
@@ -84,7 +84,7 @@ It has the following charming features:
 
 ### Architecture
 
-Pamuretas adapted the master-slave paradigm, and model the sets of individual tasks
+Pamuretas adapts the master-slave paradigm, and models the sets of individual tasks
 as two FIFO queues, where they are enqueued in topological order of the DAG.
 
 
@@ -132,21 +132,21 @@ Then we may build from the source:
     $ cd pamuretas && make
 
 By default, we turn off the `debug` mode, which makes Pamuretas
-more verbose while working, to turn it on, add the following
+less verbose while working, to turn it on, add the following
 argument when `make`:
 
     $ make debug=on
 
 This would build an executable `pamuretas`.
 
-### Invoking via CLI
+### Invoking from CLI
 
 Pamuretas takes three parameters:
 
     $ ./pamuretas [goals] [spaces] [workers]
 
 where all of them should be positive integers. Pamuretas
-does not allow input configuration which are insolvable:
+does not allow input configurations which are insolvable:
 
     $ ./pamuretas 1 8 1
     [Fatal] Single worker requires at least 13 space but only 8 given, abort
@@ -154,12 +154,12 @@ does not allow input configuration which are insolvable:
 ### Utilities
 
 We also provide a handful of utilities for easy-benchmarking. These
-are included in the `benchmarking` and `results` folder, where
-a `python` plotter, a `c` test-case enumerate and several `shell`
+are included in the `benchmarking` and `results` folder:
+a `python` plotter, a `c` test-case enumerator and several `shell`
 scripts for prettifying the result. Please refer to the comments therein
 for usage.
 
-## Adversarial Examples (Defended =D)
+## Adversarial Examples (Defended)
 
 Here we attach a series of screencasts exhibiting
 the robustness of Pamuretas under critical scenarios.
@@ -198,10 +198,10 @@ with sufficient resource:
 
 which is about 15 seconds.
 
-### Single/Mutliple Production Goals
+### Single/Multiple Production Goals
 
 <table>
-<tr><th colspan="2">Surface of Production Time aginst Worker-Space</th></tr>
+<tr><th colspan="2">Surface of Production Time against Worker-Space</th></tr>
 
 <tr><td>
 
