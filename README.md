@@ -87,17 +87,15 @@ It has the following charming features:
 Pamuretas adapted the master-slave paradigm, and model the sets of individual tasks
 as two FIFO queues, where they are enqueued in topological order of the DAG.
 
-<p align="center">
 
-<table>
-<tr><th>System Architecture</th>/tr>
+<table align="center">
+<tr><th>System Architecture</th></tr>
 <tr><td>
 
 ![arch](figs/arch.png)
 
 </td></tr></table>
 
-</p>
 
 <table>
 <tr><th>System Architecture</th><th>Work Flow</th></tr>
