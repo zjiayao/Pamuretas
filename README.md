@@ -9,6 +9,8 @@ Gitter](https://badges.gitter.im/zjiayao/Pamuretas.svg)](https://gitter.im/zjiay
 
 ![demo](figs/demo.gif)
 
+*100 workers produces 10 cars given sufficient storage spaces with ~17.14 seconds.*
+
 **This project has a companion technical report, [learn
 more](https://i.cs.hku.hk/~jyzhang/doc/pamuretas/).**
 
@@ -16,7 +18,7 @@ more](https://i.cs.hku.hk/~jyzhang/doc/pamuretas/).**
 
 
 *Pamuretas* (**Pa**rallel **Mu**lti-Dependency **Re**source-Critical **Ta**sk **S**cheduler)
-is a dynamic job allocation and dispatcher program that is designed to be
+is a dynamic job allocation and dispatch system that is designed to be
 robust, flexible and efficient. Currently, it can only solve one particular
 instance of this class of problems, but it does it very well.
 
@@ -85,6 +87,18 @@ It has the following charming features:
 Pamuretas adapted the master-slave paradigm, and model the sets of individual tasks
 as two FIFO queues, where they are enqueued in topological order of the DAG.
 
+<p align="center">
+
+<table>
+<tr><th>System Architecture</th>/tr>
+<tr><td>
+
+![arch](figs/arch.png)
+
+</td></tr></table>
+
+</p>
+
 <table>
 <tr><th>System Architecture</th><th>Work Flow</th></tr>
 <tr><td>
@@ -151,7 +165,7 @@ a `python` plotter, a `c` test-case enumerate and several `shell`
 scripts for prettifying the result. Please refer to the comments therein
 for usage.
 
-## Examples
+## Adversarial Examples (Defended =D)
 
 Here we attach a series of screencasts exhibiting
 the robustness of Pamuretas under critical scenarios.
@@ -160,7 +174,7 @@ the robustness of Pamuretas under critical scenarios.
 ### Single Worker, Thirteen Space
 
 This is a very critical scenario, a slight misgiving would
-yields trap a less-carefully implemented algorithm.
+trap a less-carefully implemented algorithm.
 
 ![1-13-1](figs/screencasts/1-13-1.gif)
 
