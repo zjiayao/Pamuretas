@@ -4,7 +4,7 @@
 [![Travis
 Status](https://travis-ci.org/zjiayao/Pamuretas.svg?branch=master)](https://travis-ci.org/zjiayao/Pamuretas/)
 [![Chat on
-Gitter](https://badges.gitter.im/zjiayao/Pamuretas.svg)](https://gitter.im/zjiayao/Pamuerats/)
+Gitter](https://badges.gitter.im/zjiayao/Pamuretas.svg)](https://gitter.im/zjiayao/Pamuretas/)
 
 
 ![demo](figs/demo.gif)
@@ -32,9 +32,15 @@ freed when it is fed into another production task as raw material.
 We further assume the goal of production (i.e., cars) does not
 occupy any spaces upon completion.
 
+<table>
+<tr><th>Dependency DAG</th><th>Constraints</th></tr>
+<tr><td>
+
 
 ![DAG](figs/dag.png)
 
+
+</td><td>
 with the following production time configurations:
 
 | Task     | Time/sec | Amount |
@@ -48,6 +54,7 @@ with the following production time configurations:
 | Battery  | 3        | 1      |
 | Car      | 6        | --     |
 
+</td></tr> </table>
 
 ### Features
 
@@ -80,9 +87,9 @@ Pamuretas adapted the master-slave paradigm, and model the sets of individual ta
 as two FIFO queues, where they are enqueued in topological order of the DAG.
 Concretely:
 
-<p align="center">
+
 ![arch](figs/arch.png)
-</p>
+
 
 The core of Pamuretas lies on its ability of delegating between the key
 components:
