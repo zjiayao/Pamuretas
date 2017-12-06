@@ -201,7 +201,7 @@ which is about 15 seconds.
 ### Single/Mutliple Production Goals
 
 <table>
-<tr>Surface of Production Time aginst Worker-Space</tr>
+<tr><th colspan="2">Surface of Production Time aginst Worker-Space</th></tr>
 
 <tr><td>
 
