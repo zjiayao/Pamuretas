@@ -14,12 +14,24 @@ more](https://i.cs.hku.hk/~jyzhang/doc/pamuretas/).**
 
 ## Introduction
 
-### Problem Formulation
 
 *Pamuretas* (**Pa**rallel **Mu**lti-Dependency **Re**source-Critical **Ta**sk **S**cheduler)
-is a dynamic job allocation and dispatcher program that is dedicated to
-solve one particular instance of this class of problems, as outlined in the dependency
-graph:
+is a dynamic job allocation and dispatcher program that is designed to be
+robust, flexible and efficient. Currently, it can only solve one particular
+instance of this class of problems, but it does it very well.
+
+
+### Problem Formulation
+
+We formulate our problem as a variant to the classical custume-producer problem
+with Resource Constrained Project Scheduling Problem (RCPSP) flavour.
+Concretely, given the number of workers and the goal of production, we wish to
+complete production with a pre-specified amount of *storage space* such that
+any component listed below occupies one space once produced; the space is
+freed when it is fed into another production task as raw material.
+We further assume the goal of production (i.e., cars) does not
+occupy any spaces upon completion.
+
 
 ![DAG](figs/dag.png)
 
@@ -68,7 +80,9 @@ Pamuretas adapted the master-slave paradigm, and model the sets of individual ta
 as two FIFO queues, where they are enqueued in topological order of the DAG.
 Concretely:
 
+<p align="center">
 ![arch](figs/arch.png)
+</p>
 
 The core of Pamuretas lies on its ability of delegating between the key
 components:
