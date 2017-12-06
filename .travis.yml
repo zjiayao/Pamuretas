@@ -1,0 +1,8 @@
+language: c
+complier:
+    - gcc
+script:
+    - cd pamuretas
+    - make
+    - ../benchmarking/run.sh
+
