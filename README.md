@@ -12,7 +12,7 @@ Gitter](https://badges.gitter.im/zjiayao/Pamuretas.svg)](https://gitter.im/zjiay
 *100 workers produces 10 cars given sufficient storage spaces in ~17.14 seconds.*
 
 **This project has a companion technical report, [learn
-more](https://i.cs.hku.hk/~jyzhang/doc/pamuretas/).**
+more](https://i.cs.hku.hk/~jyzhang/doc/pamuretas.pdf).**
 
 ## Introduction
 
@@ -257,7 +257,13 @@ scalability. Under the scenario where sufficient resources are available,
 Pamuretas is able to finish the production near the optimal
 time, i.e., around 15 seconds.
 
+## Limitation and Future Work
 
+Currently, the Worker Pool is implemented as a
+vannila array. This may become the bottleneck of
+the scalability, if we have tens of or thousands of
+workers, say. This may be solved by implementing
+a tree structure for fast indexing.
 
 ## Acknowledgment and Disclaimer
 
