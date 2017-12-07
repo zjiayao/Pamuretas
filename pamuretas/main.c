@@ -889,9 +889,7 @@ inline void destroy_work_queues() {
 // report result
 void reportResults(double production_time) {
 	int *sem_value = (int*) malloc(sizeof(int));
-	printf("==============Final report===========\n");
-	printf("=======Jiayao Zhang (3035233412)=====\n");
-	printf("===========jyzhang@cs.hku.hk=========\n");
+	printf("===========Pamuretas report===========\n");
 
 	sem_getvalue(&sem_skeleton, sem_value);
 	printf("Unused Skeleton: %d\n",   *sem_value);
