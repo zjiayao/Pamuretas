@@ -1,5 +1,7 @@
 # Pamuretas
 
+[![Join the chat at https://gitter.im/zjiayao/Pamuretas](https://badges.gitter.im/zjiayao/Pamuretas.svg)](https://gitter.im/zjiayao/Pamuretas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/zjiayao/Pamuretas/blob/master/LICENSE)
 [![Travis
 Status](https://travis-ci.org/zjiayao/Pamuretas.svg?branch=master)](https://travis-ci.org/zjiayao/Pamuretas/)
