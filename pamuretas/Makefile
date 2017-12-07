@@ -1,7 +1,7 @@
 OBJS = main.o job.o worker.o
 CC = gcc
 DEBUG = -g
-CFLAGS = -Wall -fopenmp -pthread -O2
+CFLAGS = -Wall -fopenmp -pthread -O2 -std=c99
 DFLAG =
 debug = 'off'
 ifeq ($(debug), on)
