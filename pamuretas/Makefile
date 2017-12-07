@@ -13,7 +13,7 @@ all: pamuretas
 bench: loader.c
 	$(CC) $(CFLAGS) $(DFLAG) loader.c job.o worker.o -o benchmark
 
-solver: $(OBJS)
+pamuretas: $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(DFLAG) -o pamuretas
 
 main.o: definitions.h main.h main.c
