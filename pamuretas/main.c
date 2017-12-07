@@ -257,7 +257,7 @@ int main(int argc, char** argv)
 #endif
     }
 
-    printf("[Jiayao Zhang/3035233412] Job defined, %d workers will build %d cars with %d storage spaces\n",
+    printf("[Pamuretas] Job defined, %d workers will build %d cars with %d storage spaces\n",
 		    num_workers, num_cars, num_spaces);
 
     // prepare and put semaphores into resource_pack
