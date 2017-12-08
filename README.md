@@ -9,7 +9,7 @@ Gitter](https://badges.gitter.im/zjiayao/Pamuretas.svg)](https://gitter.im/zjiay
 
 ![demo](figs/demo.gif)
 
-*100 workers produces 10 cars given sufficient storage spaces in ~17.14 seconds.*
+*100 workers produce 10 cars given a resonable amount of storage spaces in ~17.14 seconds.*
 
 **This project has a companion technical report, [learn
 more](https://i.cs.hku.hk/~jyzhang/doc/pamuretas.pdf).**
@@ -172,6 +172,9 @@ trap a less-carefully implemented algorithm.
 
 ![1-13-1](figs/screencasts/1-13-1.gif)
 
+*1 worker produces 1 car given critical storage spaces in ~40.02 seconds.*
+
+
 ### Single Space, Huge Working Force
 
 This posts two difficulties: how to optimally use
@@ -180,6 +183,7 @@ competiting with each other.
 
 ![2-1-100](figs/screencasts/2-1-100.gif)
 
+*100 workers produce 2 cars given only one storage spaces in ~38.20 seconds.*
 
 
 ## Benchmarking Results
