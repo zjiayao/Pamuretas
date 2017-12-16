@@ -61,26 +61,27 @@ occupy any spaces upon completion.
 
 Pamuretas has the following charming characteristics:
 
-- Multi-Threading
+#### Parallelism
 
-    Pamuretas assumes a customized input of number of maximum threads
-    that may run concurrently. It leverages the abundant working resource if and when
-    possible but contemplate discreetly when facing limited resource to
-    guarantee a stable performance.
+Pamuretas assumes a customized input of number of maximum threads
+that may run concurrently. It leverages the abundant working resource if and when
+possible but contemplate discreetly when facing limited resource to
+guarantee a stable performance.
 
-- Scalability
+#### Scalability
 
-    Pamuretas is shipped with a dedicated scheduler and two dispatchers, through
-    whose delegation and feedback, Pamuretas is able to perform decently well
-    no matter what task it is facing. Under most scenarios, the dynamic task
-    scheduling results a nearly optimal solution.
+Pamuretas is shipped with a dedicated scheduler and two dispatchers, through
+whose delegation and feedback, Pamuretas is able to perform decently well
+no matter what task it is facing. Under most scenarios, the dynamic task
+scheduling results a nearly optimal solution.
 
-- Robustness
+#### Robustness
 
-    Pamuretas has two built-in systems for deadlock prevention and
-    handling/recovery;
-    its built-in signaling mechanism enables the feedback between dispatchers
-    such that both competition and hungers between threads are minimized.
+Pamuretas has two built-in systems for deadlock prevention and
+handling/recovery;
+its built-in signaling mechanism enables the feedback between dispatchers
+such that both competition and hungers between threads are minimized.
+    
 
 ### Architecture
 
@@ -88,22 +89,16 @@ Pamuretas adapts the master-slave paradigm, and models the sets of individual ta
 as two FIFO queues, where they are enqueued in topological order of the DAG.
 
 
-<table align="center" style="margin: 0px auto;">
-<tr><th>System Architecture</th></tr>
-<tr><td>
+<p align="center">
+	<img alt="System Architecture" src="figs/arch.png" width=auto>
+ <br>System Architecture
+</p>
+<br>
 
-![arch](figs/arch.png)
-
-</td></tr></table>
-
-
-<table align="center" style="margin: 0px auto;">
-<tr><th>Work Flow</th></tr>
-<tr><td>
-
-![loop](figs/loop.png)
-
-</td></tr> </table>
+<p align="center">
+	<img alt="Work Flow" src="figs/loop.png" width=auto>
+ <br>Work Flow
+</p>
 
 The core of Pamuretas lies on its ability of delegating between the key
 components, i.e., one scheduler and two dispatchers. The main working
@@ -273,5 +268,5 @@ a tree structure for fast indexing.
 
 Part of this project has been submitted in partial fulfillment
 for the course *Operating Systems* offered by HKU, 2017-18.
-We thank [Mr. Pengfei Xu](https://github.com/FreemanX) for providing
-this motivating example.
+We thank the teaching staff for providing
+this motivating problem.
