@@ -12,7 +12,7 @@ Gitter](https://badges.gitter.im/zjiayao/Pamuretas.svg)](https://gitter.im/zjiay
 *100 workers produce 10 cars given a reasonable amount of storage spaces in ~17.14 seconds.*
 
 **This project has a companion technical report, [learn
-more](https://i.cs.hku.hk/~jyzhang/doc/pamuretas.pdf).**
+more](https://jiayao-zhang.com/doc/pamuretas.pdf).**
 
 ## Introduction
 
